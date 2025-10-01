@@ -22,6 +22,7 @@ fun Formulario(){
 
     var username by remember { mutableStateOf( "") }
     var pass by remember { mutableStateOf("") }
+    var showDialog by remember { mutableStateOf(false) }
 
     Column (
         modifier = Modifier.fillMaxSize(),
@@ -45,21 +46,24 @@ fun Formulario(){
             },
             label = { Text(text = "Introduce tu contraseña")}
         )
-        Button(onClick = { }) {
+        Button(onClick = {
+            showDialog = true
+        }) {
             Text(text = "Enviar")
         }
     }
 
-    AlertDialog(
-        onDismissRequest = { },
-        title = { Text(text = "ggggggggggggg")},
-        text = { Text(text = "kmlkxfdklvlkjfv")},
-        confirmButton = {
-            TextButton(onClick = { }) {
-                Text(text = "OK")
+    if (showDialog){
+        AlertDialog(
+            onDismissRequest = {showDialog = false},
+            title = { Text(text = "Datos Enviados")},
+            text = { Text(text = "Nombre: $username\nContraseña: $pass")},
+            confirmButton = {
+                TextButton(onClick = {showDialog = false}) {
+                    Text(text = "OK")
+                }
             }
-        }
-    )
-
+        )
+    }
 }
 
