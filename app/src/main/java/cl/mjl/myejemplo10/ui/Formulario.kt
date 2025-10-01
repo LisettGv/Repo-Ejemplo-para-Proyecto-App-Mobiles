@@ -3,10 +3,12 @@ package cl.mjl.myejemplo10.ui.theme
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -48,4 +50,16 @@ fun Formulario(){
         }
     }
 
+    AlertDialog(
+        onDismissRequest = { },
+        title = { Text(text = "ggggggggggggg")},
+        text = { Text(text = "kmlkxfdklvlkjfv")},
+        confirmButton = {
+            TextButton(onClick = { }) {
+                Text(text = "OK")
+            }
+        }
+    )
+
 }
+
