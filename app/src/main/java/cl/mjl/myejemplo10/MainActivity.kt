@@ -13,6 +13,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import cl.mjl.myejemplo10.ui.theme.Formulario
 import cl.mjl.myejemplo10.ui.theme.MyEjemplo10Theme
 
+
+
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
