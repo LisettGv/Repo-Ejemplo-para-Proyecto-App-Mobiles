@@ -1,5 +1,4 @@
 package cl.mjl.myejemplo10
-
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -12,7 +11,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import cl.mjl.myejemplo10.ui.theme.Formulario
 import cl.mjl.myejemplo10.ui.theme.MyEjemplo10Theme
-
 
 
 class MainActivity : ComponentActivity() {
