@@ -1,4 +1,4 @@
-package cl.mjl.myejemplo10.ui
+package cl.mjl.myejemplo10.ui.theme
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -23,7 +23,7 @@ fun Imagen(){
         Text(text = "Pagina Numero Uno")
         Text(text = "8 de agosto, dia del Gato")
         Image (
-            painter = painterResource(id = R.drawable.gatitos),
+            painter = painterResource(id = R.drawable.gatito),
             contentDescription = "Imagen de gatitos",
             contentScale = ContentScale.Crop
         )

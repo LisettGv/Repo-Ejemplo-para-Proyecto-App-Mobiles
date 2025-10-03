@@ -9,7 +9,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import cl.mjl.myejemplo10.ui.Imagen
+import cl.mjl.myejemplo10.ui.theme.Imagen
+import cl.mjl.myejemplo10.ui.theme.Navegacion
 import cl.mjl.myejemplo10.ui.theme.Formulario
 import cl.mjl.myejemplo10.ui.theme.MyEjemplo10Theme
 
@@ -19,7 +20,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             MyEjemplo10Theme {
-                Imagen()
+                Navegacion()
             }
         }
     }

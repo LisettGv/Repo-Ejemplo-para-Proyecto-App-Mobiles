@@ -1,4 +1,4 @@
-package cl.mjl.myejemplo10.ui
+package cl.mjl.myejemplo10.ui.theme
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -14,7 +14,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.LifecycleController
 import androidx.navigation.NavController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -30,7 +29,6 @@ fun Navegacion() {
     }
 }
 
-
 @Composable
 fun Pagina1(navController: NavController) {
     Column(
@@ -41,16 +39,15 @@ fun Pagina1(navController: NavController) {
         Text("Página Número Uno")
         Text("8 de agosto, día del gato")
         Image(
-            painter = painterResource(id = R.drawable.gatitos),
+            painter = painterResource(id = R.drawable.gatito),
             contentDescription = "Imagen de un gato",
             contentScale = ContentScale.Crop
         )
-        Button(onClick = {  }) {
+        Button(onClick = { navController.navigate("pagina2") }) {
             Text("Ir a la página 2")
         }
     }
 }
-
 
 @Composable
 fun Pagina2(navController: NavController) {
@@ -60,7 +57,8 @@ fun Pagina2(navController: NavController) {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text("Bienvenido a la página 2")
-        Spacer(modifier = Modifier.height(16.dp))
+        Spacer(modifier = Modifier.height(16.dp)
+        )
         Button(onClick = { navController.navigate("pagina1") }) {
             Text("Ir a la primera página")
         }
